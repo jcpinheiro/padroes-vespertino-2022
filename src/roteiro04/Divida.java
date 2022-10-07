@@ -1,4 +1,4 @@
-package roteiro03;
+package roteiro04;
 
 public class Divida {
 
@@ -11,7 +11,7 @@ public class Divida {
         return historicoPagamentos;
     }
 
-    public void adiciona(Pagamento pagamento) {
+    public void registra(Pagamento pagamento) {
         historicoPagamentos.registra(pagamento);
     }
 

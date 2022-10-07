@@ -7,19 +7,26 @@ public class HistoricoPagamentosTeste {
     public static void main(String[] args) {
         HistoricoPagamentos pagamentos = new HistoricoPagamentos();
 
-        Pagamento pagamento = new Pagamento("PicPay", "23423423423", 100);
+        Pagamento pagamento1 = new Pagamento("PicPay", "23423423423", 100);
         Pagamento pagamento2 = new Pagamento("PicPay", "23423423423", 200);
 
-        pagamentos.adiciona(pagamento );
-        pagamentos.add(pagamento2);
 
-        pagamentos.remove(pagamento2 );
+//        pagamentos.registra(pagamento1 );
+//        pagamentos.registra(pagamento2 );
 
-        pagamentos.addAll(List.of(pagamento2, pagamento ) );
+        pagamentos.add(pagamento1 );
+        pagamentos.add(pagamento2 );
 
         System.out.println(pagamentos );
-
         System.out.println("Valor pago " + pagamentos.getValorPago() );
+
+
+//        pagamentos.remove(pagamento2 );
+
+        //pagamentos.addAll(List.of(pagamento2, pagamento ) );
+
+//        System.out.println(pagamentos );
+//        System.out.println("Valor pago " + pagamentos.getValorPago() );
 
 
     }

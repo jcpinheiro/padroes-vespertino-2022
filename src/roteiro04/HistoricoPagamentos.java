@@ -1,12 +1,13 @@
-package roteiro03;
+package roteiro04;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
-class HistoricoPagamentos extends ArrayList<Pagamento> {
+class HistoricoPagamentos  {
 
     private double valorPago;
-    //private List<Pagamento> historicoPagamentos = new ArrayList<>();
+    private List<Pagamento> historicoPagamentos = new ArrayList<>();
 
     double getValorPago() {
         return valorPago;
@@ -24,13 +25,14 @@ class HistoricoPagamentos extends ArrayList<Pagamento> {
 
     void registra(Pagamento pagamento ) {
        this.paga(pagamento.getValor() );
-       this.add(pagamento);
+       historicoPagamentos.add(pagamento);
     }
+
 
     public ArrayList<Pagamento> pagamentosAntesDe(LocalDate data) {
         ArrayList<Pagamento> pagamentosFiltrados = new ArrayList<>();
 
-        for (Pagamento pagamento : this )
+        for (Pagamento pagamento : this.historicoPagamentos )
             if (pagamento.getData().isBefore(data) ) {
                 pagamentosFiltrados.add(pagamento );
             }
@@ -39,7 +41,7 @@ class HistoricoPagamentos extends ArrayList<Pagamento> {
     }
     public ArrayList<Pagamento> pagamentosComValorMaiorQue(double valorMinimo) {
         ArrayList<Pagamento> pagamentosFiltrados = new ArrayList<Pagamento>();
-        for (Pagamento pagamento : this ) {
+        for (Pagamento pagamento : this.historicoPagamentos ) {
             if (pagamento.getValor() > valorMinimo) {
                 pagamentosFiltrados.add(pagamento);
             }
@@ -48,7 +50,7 @@ class HistoricoPagamentos extends ArrayList<Pagamento> {
     }
     public ArrayList<Pagamento> pagamentosDo(String cnpjPagador) {
         ArrayList<Pagamento> pagamentosFiltrados = new ArrayList<Pagamento>();
-        for (Pagamento pagamento : this ) {
+        for (Pagamento pagamento : this.historicoPagamentos ) {
             if (pagamento.getCnpjPagador().equals(cnpjPagador)) {
                 pagamentosFiltrados.add(pagamento);
             }
