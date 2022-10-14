@@ -5,6 +5,7 @@ public class Divida {
     private String credor;
     private CNPJ cnpjDoCredor;
     private double total;
+
     private HistoricoPagamentos historicoPagamentos = new HistoricoPagamentos();
 
     public HistoricoPagamentos getHistoricoPagamentos() {
