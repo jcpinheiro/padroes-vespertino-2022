@@ -1,4 +1,4 @@
-package roteiro05;
+package roteiro06;
 
 import java.text.NumberFormat;
 import java.util.Locale;

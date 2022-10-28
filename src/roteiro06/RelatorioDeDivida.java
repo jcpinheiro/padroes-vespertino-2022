@@ -1,4 +1,4 @@
-package roteiro05;
+package roteiro06;
 
 import java.text.NumberFormat;
 
@@ -11,7 +11,7 @@ public class RelatorioDeDivida {
   }*/
     public void geraRelatorio(Divida divida, NumberFormat formatadorDeNumero) {
         System.out.println("Credor: " + divida.getCredor());
-        System.out.println("Cnpj credor: " + divida.getDocumento());
+        System.out.println("Cnpj credor: " + divida.getDocumento() );
 
         System.out.println("Valor a pagar: " +
                 formatadorDeNumero.format(divida.valorAPagar()));
