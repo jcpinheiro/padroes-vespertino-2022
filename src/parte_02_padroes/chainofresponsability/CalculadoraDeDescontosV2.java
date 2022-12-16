@@ -7,6 +7,7 @@ public class CalculadoraDeDescontosV2 {
 
     // verifica primeira regra de possível desconto
     if(orcamento.totalDeItens() > 5) {
+      // codigo
       return new DescontoPorCincoItens().desconta(orcamento);
     }
 

@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Orcamento {
-    private double valor;
     List<Item> itens = new ArrayList<>();
 
-    public Orcamento(double valor) {
-        this.valor = valor;
+    public void adiciona(Item item ) {
+        this.itens.add(item );
     }
 
     public double getValor() {
-        return valor;
+        double total = 0;
+        for (Item item : this.itens ) {
+            total = total + item.getSubTotal();
+
+        }
+        return total;
     }
 
     public List<Item> getItens() {
